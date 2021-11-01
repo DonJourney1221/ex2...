@@ -1,0 +1,55 @@
+0<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/pixi.min.js"></script>
+    <script>
+		var app = new PIXI.Application(500,350);
+        document.body.appendChild(app.view);
+        
+        var bg = new PIXI.Sprite.fromImage("res/bg.png");
+        app.stage.addChild(bg);
+		var pic1 = new PIXI.Sprite.fromImage("res/p2.png");
+		pic1.height = 100;
+		pic1.width = 100;
+		pic1.x = 120;
+		pic1.y = 220;
+		app.stage.addChild(pic1);
+		pic1.interactive = true;
+		pic1.buttonMode = true;
+		pic1.on("click",a);
+		function a(){
+			pic1.visible = false;
+		}
+		var pic2 = new PIXI.Sprite.fromImage("res/p1.png");
+		pic2.height = 100;
+		pic2.width = 100;
+		pic2.x = 220;
+		pic2.y = 80;
+		app.stage.addChild(pic2);
+		pic2.interactive = true;
+		pic2.buttonMode = true;
+		pic2.on("click",b);
+		function b(){
+			pic2.visible = false;
+		}
+		var pic3 = new PIXI.Sprite.fromImage("res/p3.png");
+		pic3.height = 100;
+		pic3.width = 100;
+		pic3.x = 350;
+		pic3.y = 220;
+		app.stage.addChild(pic3);
+		pic3.interactive = true;
+		pic3.buttonMode = true;
+		pic3.on("click",c);
+		function c(){
+			pic3.visible = false;
+		}
+    </script>
+</body>
+</html>
